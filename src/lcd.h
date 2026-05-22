@@ -5,7 +5,6 @@
 #include <stdint.h>
 
 // LCD configuration settings
-#define LCD_ADDR        0x27
 #define LCD_LINE1       1
 #define LCD_LINE2       2
 

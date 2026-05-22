@@ -1,5 +1,6 @@
 #include "lcd.h"
 #include "hal_avr.h"
+#include "config.h"
 #include <util/delay.h>
 
 /* ===== PCF8574 bit map ===== */
@@ -41,12 +42,14 @@ static void LCD_WriteNibble(uint8_t nibble, uint8_t control)
 
 static void LCD_Send(uint8_t value, uint8_t mode)
 {
-    TWI0_Start(LCD_ADDR);
+    TWI0_Start(LCD1602_ADDR);
 
     LCD_WriteNibble(value & 0xF0, mode);
     LCD_WriteNibble((value << 4) & 0xF0, mode);
 
     TWI0_Stop();
+
+    _delay_us(50);
 }
 
 /* ================================================= */
