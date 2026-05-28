@@ -1,5 +1,7 @@
 # 🤖 Hexadrone Standalone Safety Hub
 
+[▶️ Video Demonstration](https://www.youtube.com/watch?v=5gf2d8lJZK4)
+
 This project utilizes an `AVR128DB48` microcontroller to manage a 5-peripheral telemetry system for hexadrone operations.
 
 ## System Architecture
